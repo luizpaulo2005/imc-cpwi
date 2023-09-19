@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Índice de Massa Corporal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body class="w-screen h-screen bg-gray-950 text-zinc-300 flex items-center justify-center">
+    <div class="flex flex-col gap-4 w-full max-w-xs">
+      <p class="text-center text-3xl">Calculadora de IMC</p>
+      <div class="flex flex-col gap-2">
+        <label for="altura" class="font-semibold">Altura</label>
+        <input
+          id="altura"
+          class="outline-none shadow-sm rounded h-10 px-3 bg-zinc-900 text-white"
+          type="number"
+        />
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="peso" class="font-semibold">Peso</label>
+        <input
+          id="peso"
+          class="outline-none shadow-sm rounded h-10 px-3 bg-zinc-900 text-white"
+          type="number"
+        />
+      </div>
+      <button
+        onclick="atualizarTela()"
+        class="bg-emerald-500 rounded font-semibold text-white h-10 transition-colors hover:bg-emerald-600"
+      >
+        Calcular
+      </button>
+      <p id="resultado"></p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
